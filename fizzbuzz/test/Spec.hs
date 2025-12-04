@@ -2,6 +2,8 @@ module Main where
 
 import Test.Hspec
 import FizzBuzz (fizzbuzz)
+import Control.Exception (evaluate)
+import Test.Hspec (anyException)
 
 main :: IO ()
 main = hspec $ do
@@ -18,3 +20,6 @@ main = hspec $ do
     it "returns the number for others" $ do
       fizzbuzz 1 `shouldBe` "1"
       fizzbuzz 7 `shouldBe` "7"
+
+    it "throws error for non-positive numbers" $ do
+      evaluate (fizzbuzz 0) `shouldThrow` anyException
