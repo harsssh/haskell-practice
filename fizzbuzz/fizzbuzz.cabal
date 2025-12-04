@@ -76,6 +76,7 @@ executable fizzbuzz
     default-language: GHC2021
 
 library
+  import: warnings
   exposed-modules: FizzBuzz
   hs-source-dirs: src
   build-depends: base

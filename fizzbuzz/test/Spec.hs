@@ -3,7 +3,6 @@ module Main where
 import Test.Hspec
 import FizzBuzz (fizzbuzz)
 import Control.Exception (evaluate)
-import Test.Hspec (anyException)
 
 main :: IO ()
 main = hspec $ do
