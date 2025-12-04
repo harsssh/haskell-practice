@@ -67,10 +67,23 @@ executable fizzbuzz
     -- other-extensions:
 
     -- Other library packages from which modules are imported.
-    build-depends:    base ^>=4.17.2.1
+    build-depends:    base ^>=4.17.2.1, fizzbuzz
 
     -- Directories containing source files.
     hs-source-dirs:   app
 
     -- Base language which the package is written in.
     default-language: GHC2021
+
+library
+  exposed-modules: FizzBuzz
+  hs-source-dirs: src
+  build-depends: base
+  default-language: GHC2021
+
+test-suite fizzbuzz-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs: test
+  build-depends: base, hspec, fizzbuzz
+  default-language: GHC2021
