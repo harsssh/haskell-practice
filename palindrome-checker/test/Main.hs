@@ -18,3 +18,12 @@ main = hspec $ do
 
     it "handles single character" $ do
       isPalindrome "a" `shouldBe` True
+
+    it "ignores case (returns True for mixed case palindromes)" $ do
+      isPalindrome "Racecar" `shouldBe` True
+      isPalindrome "Noon" `shouldBe` True
+      isPalindrome "ABA" `shouldBe` True
+
+    it "returns True for same-case uppercase palindromes" $ do
+      isPalindrome "RACECAR" `shouldBe` True
+      isPalindrome "NOON" `shouldBe` True
