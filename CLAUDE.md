@@ -1,5 +1,9 @@
 # Haskell 練習プロジェクト
 
+Automatically use context7 for code generation and library documentation.
+
+---
+
 ## 概要
 
 Haskell の学習を目的としたリポジトリ。テーマごとにディレクトリを分け、独立したアプリケーションを実装する。
