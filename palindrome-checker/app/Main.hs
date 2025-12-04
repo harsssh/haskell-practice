@@ -1,8 +1,12 @@
 module Main where
 
-import qualified MyLib (someFunc)
+import qualified MyLib
+import System.Environment (getArgs)
+import System.Exit (exitFailure)
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
-  MyLib.someFunc
+  args <- getArgs
+  case args of
+    [input] -> print $ MyLib.isPalindrome input
+    _ -> exitFailure

@@ -124,4 +124,5 @@ test-suite palindrome-checker-test
     -- Test dependencies.
     build-depends:
         base ^>=4.17.2.1,
-        palindrome-checker
+        palindrome-checker,
+        hspec
