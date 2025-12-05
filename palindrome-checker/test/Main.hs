@@ -11,12 +11,12 @@ main = hspec $ do
 
       cases :: [(String, Bool)]
       cases =
-        [ ("rececar", True),
+        [ ("racecar", True),
           ("noon", True),
           ("hello", False),
           ("", True),
           ("a", True),
-          ("Rececar", True),
+          ("Racecar", True),
           ("Noon", True),
           ("ABA", True),
           ("RACECAR", True),

@@ -7,4 +7,6 @@ isPalindrome s = normalized == reversed
         reversed = reverse normalized
 
 isPalindrome' :: String -> Bool
-isPalindrome' _ = True
+isPalindrome' [] = True
+isPalindrome' [_] = True
+isPalindrome' (c:cs) = toLower c == toLower (last cs) && isPalindrome' (init cs)
